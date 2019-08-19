@@ -15,18 +15,33 @@ function play(clickedId) {
   }
   console.log(board);
 
-  const topLeft = board[0];
-  const topCenter = board[1];
-  const topRight = board[2];
-  const middleLeft = board[3];
-  const middleCenter = board[4];
-  const middleRight = board[5];
-  const bottomLeft = board[6];
-  const bottomCenter = board[7];
-  const bottomRight = board[8];
+  let topLeft = board[0];
+  let topCenter = board[1];
+  let topRight = board[2];
+  let middleLeft = board[3];
+  let middleCenter = board[4];
+  let middleRight = board[5];
+  let bottomLeft = board[6];
+  let bottomCenter = board[7];
+  let bottomRight = board[8];
+
+
+  function reset() {
+    let td = document.getElementsByTagName('td')
+    for (i = 0; i <= 8; i++){
+      td.innerText = ''
+    }
+    console.log(td)
+
+
+
+
+  }
 
   if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight) {
     alert(`${topLeft} wins`);
+    reset()
+    console.log('l')
     return;
   }
   if (middleLeft !== undefined && middleLeft === middleCenter && middleLeft === middleRight) {
@@ -58,7 +73,7 @@ function play(clickedId) {
     return;
   }
 
-  
+
   let boardFull = true;
   for (let i = 0; i <= 8; i++) {
     if (board[i] === undefined) {
@@ -70,103 +85,3 @@ function play(clickedId) {
   }
 }
 
-function reset (){
-  if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight){
-   return
-    topLeft = '';
-   topCenter = '';
-   topRight = '';
-   middleLeft = '';
-   middleCenter = '';
-   middleRight = '';
-   bottomLeft = '';
-   bottomCenter = '';
-   bottomRight = '';
-  }
-  if (middleLeft !== undefined && middleLeft === middleCenter && middleLeft === middleRight) {
-    return
-    topLeft = '';
-
-   topCenter = '';
-   topRight = '';
-   middleLeft = '';
-   middleCenter = '';
-   middleRight = '';
-   bottomLeft = '';
-   bottomCenter = '';
-   bottomRight = '';
-  }
-  if (bottomLeft !== undefined && bottomLeft === bottomCenter && bottomLeft === bottomRight) {
-    return
-    topLeft = '';
-   topCenter = '';
-   topRight = '';
-   middleLeft = '';
-   middleCenter = '';
-   middleRight = '';
-   bottomLeft = '';
-   bottomCenter = '';
-   bottomRight = '';
-  }
-  if (topLeft !== undefined && topLeft === middleLeft && topLeft === bottomLeft) {
-    return
-    topLeft = '';
-   topCenter = '';
-   topRight = '';
-   middleLeft = '';
-   middleCenter = '';
-   middleRight = '';
-   bottomLeft = '';
-   bottomCenter = '';
-   bottomRight = '';
-  }
-  if (topCenter !== undefined && topCenter === middleCenter && topCenter === bottomCenter) {
-    return
-    topLeft = '';
-   topCenter = '';
-   topRight = '';
-   middleLeft = '';
-   middleCenter = '';
-   middleRight = '';
-   bottomLeft = '';
-   bottomCenter = '';
-   bottomRight = '';
-  }
-  if (topRight !== undefined && topRight === middleRight && topRight === bottomRight) {
-    return
-    topLeft = '';
-   topCenter = '';
-   topRight = '';
-   middleLeft = '';
-   middleCenter = '';
-   middleRight = '';
-   bottomLeft = '';
-   bottomCenter = '';
-   bottomRight = '';
-  }
-  if (topLeft !== undefined && topLeft === middleCenter && topLeft === bottomRight) {
-    return
-    topLeft = '';
-   topCenter = '';
-   topRight = '';
-   middleLeft = '';
-   middleCenter = '';
-   middleRight = '';
-   bottomLeft = '';
-   bottomCenter = '';
-   bottomRight = '';
-  }
-  if (bottomLeft !== undefined && bottomLeft === middleCenter && bottomLeft === topRight) {
-    return
-    topLeft = '';
-   topCenter = '';
-   topRight = '';
-   middleLeft = '';
-   middleCenter = '';
-   middleRight = '';
-   bottomLeft = '';
-   bottomCenter = '';
-   bottomRight = '';
-  }
-  return
-}
