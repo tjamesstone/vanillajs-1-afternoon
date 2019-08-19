@@ -69,3 +69,104 @@ function play(clickedId) {
     alert("Cat's game");
   }
 }
+
+function reset (){
+  if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight){
+   return
+    topLeft = '';
+   topCenter = '';
+   topRight = '';
+   middleLeft = '';
+   middleCenter = '';
+   middleRight = '';
+   bottomLeft = '';
+   bottomCenter = '';
+   bottomRight = '';
+  }
+  if (middleLeft !== undefined && middleLeft === middleCenter && middleLeft === middleRight) {
+    return
+    topLeft = '';
+
+   topCenter = '';
+   topRight = '';
+   middleLeft = '';
+   middleCenter = '';
+   middleRight = '';
+   bottomLeft = '';
+   bottomCenter = '';
+   bottomRight = '';
+  }
+  if (bottomLeft !== undefined && bottomLeft === bottomCenter && bottomLeft === bottomRight) {
+    return
+    topLeft = '';
+   topCenter = '';
+   topRight = '';
+   middleLeft = '';
+   middleCenter = '';
+   middleRight = '';
+   bottomLeft = '';
+   bottomCenter = '';
+   bottomRight = '';
+  }
+  if (topLeft !== undefined && topLeft === middleLeft && topLeft === bottomLeft) {
+    return
+    topLeft = '';
+   topCenter = '';
+   topRight = '';
+   middleLeft = '';
+   middleCenter = '';
+   middleRight = '';
+   bottomLeft = '';
+   bottomCenter = '';
+   bottomRight = '';
+  }
+  if (topCenter !== undefined && topCenter === middleCenter && topCenter === bottomCenter) {
+    return
+    topLeft = '';
+   topCenter = '';
+   topRight = '';
+   middleLeft = '';
+   middleCenter = '';
+   middleRight = '';
+   bottomLeft = '';
+   bottomCenter = '';
+   bottomRight = '';
+  }
+  if (topRight !== undefined && topRight === middleRight && topRight === bottomRight) {
+    return
+    topLeft = '';
+   topCenter = '';
+   topRight = '';
+   middleLeft = '';
+   middleCenter = '';
+   middleRight = '';
+   bottomLeft = '';
+   bottomCenter = '';
+   bottomRight = '';
+  }
+  if (topLeft !== undefined && topLeft === middleCenter && topLeft === bottomRight) {
+    return
+    topLeft = '';
+   topCenter = '';
+   topRight = '';
+   middleLeft = '';
+   middleCenter = '';
+   middleRight = '';
+   bottomLeft = '';
+   bottomCenter = '';
+   bottomRight = '';
+  }
+  if (bottomLeft !== undefined && bottomLeft === middleCenter && bottomLeft === topRight) {
+    return
+    topLeft = '';
+   topCenter = '';
+   topRight = '';
+   middleLeft = '';
+   middleCenter = '';
+   middleRight = '';
+   bottomLeft = '';
+   bottomCenter = '';
+   bottomRight = '';
+  }
+  return
+}
