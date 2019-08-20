@@ -13,7 +13,11 @@ function play(clickedId) {
     clickedElement.innerText = 'O';
     board[clickedId] = 'O';
   }
-  console.log(board);
+
+  let squares = document.getElementsByTagName('td');
+
+
+  
 
   let topLeft = board[0];
   let topCenter = board[1];
@@ -26,51 +30,58 @@ function play(clickedId) {
   let bottomRight = board[8];
 
 
-  function reset() {
-    let td = document.getElementsByTagName('td')
-    for (i = 0; i <= 8; i++){
-      td.innerText = ''
+  
+
+
+  function resetBoard (){
+    
+    for(let i = 0; i >= squares.length; i++){
+         squares[i].innerText = ''
     }
-    console.log(td)
+    
+}
 
-
-
-
-  }
 
   if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight) {
     alert(`${topLeft} wins`);
-    reset()
-    console.log('l')
-    return;
+    resetBoard() 
+    
+    ;
   }
   if (middleLeft !== undefined && middleLeft === middleCenter && middleLeft === middleRight) {
     alert(`${middleLeft} wins`);
-    return;
+    resetBoard()
+    ;
   }
   if (bottomLeft !== undefined && bottomLeft === bottomCenter && bottomLeft === bottomRight) {
     alert(`${bottomLeft} wins`);
-    return;
+    resetBoard()
+    ;
   }
   if (topLeft !== undefined && topLeft === middleLeft && topLeft === bottomLeft) {
     alert(`${topLeft} wins`);
-    return;
+    resetBoard()
+    ;
   }
   if (topCenter !== undefined && topCenter === middleCenter && topCenter === bottomCenter) {
     alert(`${topCenter} wins`);
-    return;
+    resetBoard()
+    ;
   }
   if (topRight !== undefined && topRight === middleRight && topRight === bottomRight) {
     alert(`${topRight} wins`);
-    return;
+    resetBoard()
+    ;
   }
   if (topLeft !== undefined && topLeft === middleCenter && topLeft === bottomRight) {
     alert(`${topLeft} wins`);
-    return;
+    resetBoard()
+    ;
   }
   if (bottomLeft !== undefined && bottomLeft === middleCenter && bottomLeft === topRight) {
     alert(`${bottomLeft} wins`);
-    return;
+    resetBoard()
+    ;
   }
 
 
